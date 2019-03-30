@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Touch A Bunny</title>
+        <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>Touch-a-bunny🐰🐰 <span class="score">0</span></h1>
+        <button onClick="startGame()">Play!</button>
+
+        <div class="game">
+            <div class="home home1">
+                <div class="rabbit"></div>
+            </div>
+            <div class="game">
+                <div class="home home2">
+                    <div class="rabbit"></div>
+                </div>
+                <div class="game">
+                    <div class="home home3">
+                        <div class="rabbit"></div>
+                    </div>
+                    <div class="game">
+                        <div class="home home4">
+                            <div class="rabbit"></div>
+                        </div>
+                        <div class="game">
+                            <div class="home home5">
+                                <div class="rabbit"></div>
+                            </div>
+                            <div class="game">
+                                <div class="home home6">
+                                    <div class="rabbit"></div>
+                                </div>
+                                <div class="game">
+                                    <div class="home home7">
+                                        <div class="rabbit"></div>
+                                    </div>
+
+        <script>
+            const homes = document.querySelectorAll(".home");
+            const scoreBoard = document.querySelector(".score");
+            const rabbits = document.querySelectorAll(".rabbit");
+            let lastHide;
+            let timeUp = false;
+            let score = 0;
+
+
+
+           const randomTime =(min, max) => {
+               return Math.round(Math.random() * (max -min) * min);
+
+            }
+
+            function randomHide(hides) {
+                const idx = Math.floor(Math.random() * hides.lenght);
+                const hide = hides.[idx];
+                if (hide === lastHide) {
+                    console.log("Same on silly rabbittt");
+                    return randomHide(hides);
+                }
+                lastHide = hide;
+                return hide;
+            }
+
+            
+
+
+        </script>
+        </div>
+    </body>
+</html>
